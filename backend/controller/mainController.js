@@ -5,6 +5,11 @@ function home(req,res) {
     res.render("home")
 }
 
+function complaint(req,res){
+    res.redirect("/complaint")
+}
+
 module.exports = {
-    home: home
+    home: home,
+    complaint : complaint
 }
