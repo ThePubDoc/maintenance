@@ -5,4 +5,6 @@ function home(req,res) {
     res.render("home")
 }
 
-fun
+module.exports = {
+    home: home
+}
