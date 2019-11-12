@@ -16,6 +16,10 @@ const complaints = sequelize.define('complaints',{
         type : Sequelize.STRING,
         allowNull : false
     },
+    room_no: {
+        type : Sequelize.STRING,
+        allowNull : true
+    },
     complaint : {
         type : Sequelize.STRING,
         allowNull : false
