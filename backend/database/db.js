@@ -25,7 +25,7 @@ const complaints = sequelize.define('complaints',{
         allowNull : false
     },
     status : {
-        type : Sequelize.STRING,
+        type : Sequelize.BOOLEAN,
         allowNull : false
     }
 });
