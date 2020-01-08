@@ -7,7 +7,7 @@ function admin(req,res){
         };
         console.log(newUser);
         req.session.user = newUser;
-        res.redirect('/complaints')
+        res.redirect('/status')
     }
 }
 

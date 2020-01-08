@@ -14,11 +14,13 @@ router.route('/complaint').post(complaintController.complaint)
 router.route('/admin').get(mainController.admin)
 router.route('/admin').post(adminController.admin)
 
-router.route('/complaints').get(mainController.allComplaints)
+router.route('/civilComplaints').get(mainController.civilComplaints)
+router.route('/electricalComplaints').get(mainController.electricalComplaints)
+
 router.route('/complaints').post(mainController.complaintStatus)
 
 
-router.route('/status').get(mainController.status)
+router.route('/status').get(mainController.allComplaints)
 
 
 module.exports = router

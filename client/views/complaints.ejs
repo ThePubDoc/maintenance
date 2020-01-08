@@ -1,16 +1,15 @@
 <html>
     <body>
         <% for (i in allComp) { %>
-            <%= allComp[i].department %>
-            <%= allComp[i].room_no %>
-            <%= allComp[i].complaint %>
-            <form method="POST" action="/complaints">
-                <% let checked = allComp[i].status ? "checked" : "" %>
-                <input id="opt1" type="checkbox" name="check1" <%= checked %> />
-                <button>Save</button>
-            </form>
+            <b>Building</b> <%= allComp[i].building %> <br>
+            <b>Location</b><%= allComp[i].location %> <br>
+            <b>Complaint</b><%= allComp[i].complaint %> <br>
+            <b>Name</b><%= allComp[i].name %> <br>
+            <b>Mobile no:</b><%= allComp[i].mobile %> <br>
+            <b>Suitable Time</b><%= allComp[i].time %> <br>
             
             <br>
+            <hr>
         <% } %>
     </body>
 </html>

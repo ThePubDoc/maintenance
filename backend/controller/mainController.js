@@ -13,12 +13,16 @@ function admin(req,res){
     res.render("admin")
 }
 
-function allComplaints(req,res){
+function civilComplaints(req,res){
     if(!req.session.user){
         res.redirect('/admin');
     }
     else{
-        complaints.findAll()
+        complaints.findAll({
+            where : {
+                type : "civil"
+            }
+        })
         .then(allComp => {
             res.render("complaints", {
                 allComp : allComp,
@@ -26,6 +30,29 @@ function allComplaints(req,res){
         })
     }
 }
+
+function allComplaints(req,res){
+    res.render("complaintTypeSelection")
+}
+
+function electricalComplaints(req,res){
+    if(!req.session.user){
+        res.redirect('/admin');
+    }
+    else{
+        complaints.findAll({
+            where : {
+                type : "electrical"
+            }
+        })
+        .then(allComp => {
+            res.render("complaints", {
+                allComp : allComp,
+            })
+        })
+    }
+}
+
 
 function status(req,res){
     complaints.findAll()
@@ -46,5 +73,7 @@ module.exports = {
     admin : admin,
     allComplaints : allComplaints,
     status : status,
-    complaintStatus : complaintStatus
+    complaintStatus : complaintStatus,
+    civilComplaints : civilComplaints,
+    electricalComplaints : electricalComplaints
 }
