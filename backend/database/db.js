@@ -12,15 +12,31 @@ const complaints = sequelize.define('complaints',{
         primaryKey: true,
         autoIncrement: true
     },
-    department : {
+    building : {
         type : Sequelize.STRING,
         allowNull : false
     },
-    room_no: {
+    location: {
         type : Sequelize.STRING,
         allowNull : true
     },
+    type : {
+        type : Sequelize.STRING,
+        allowNull : false
+    },
     complaint : {
+        type : Sequelize.STRING,
+        allowNull : false
+    },
+    name : {
+        type : Sequelize.BOOLEAN,
+        allowNull : false
+    },
+    mobile : {
+        type : Sequelize.NUMBER,
+        allowNull : false
+    },
+    time : {
         type : Sequelize.STRING,
         allowNull : false
     },

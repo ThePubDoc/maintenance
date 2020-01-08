@@ -1,10 +1,21 @@
 <html>
     <body>
         <form method="POST" action="/complaint">
-            Department<input type="text" name="department">
-            Room No:<input type="text" name="room_no">
-            Complaint<input type="text" name="complaint">
+            Name of the building/Premises<input type="text" name="building">
+            Location of work/Job<input type="text" name="location">
+
+            Complaint Type <select name="type">
+                                <option value="civil">Civil</option>
+                                <option value="electrical">Electrical</option>
+                            </select>
+
+            Brief description of Complaint<input type="text" name="complaint">
+            Name of the person to be contacted<input type="text" name="name">
+            Mobile no. of the person to be contacted<input type="number" name="mobile">
+            Suitable time<input type="text" name="time">
+
             <button>Submit</button>
+
         </form>
     </body>
 </html>

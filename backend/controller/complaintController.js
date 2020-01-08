@@ -2,16 +2,21 @@ const dbConn = require("../database/db.js");
 const complaints = dbConn.complaints;
 
 function complaint(req,res){
-    const {department,room_no,complaint} = req.body;
+    const {building, location, type, complaint, name, mobile, time} = req.body;
     const status = false;
+    console.log(req.body);
     complaints.create({
-        department,
-        room_no,
+        building,
+        location,
+        type,
         complaint,
-        status
+        name,
+        mobile,
+        status,
+        time
     })
     .then(comp => {
-        res.redirect("/submitted")
+        res.send("/submitted")
     })
 }
 
