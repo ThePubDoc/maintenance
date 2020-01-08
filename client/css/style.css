@@ -1,0 +1,441 @@
+:root {
+  --body-bg-color: #eaedeb;
+  --main-text-color: #1b2631;
+  --nav-bg-color: #fdfdfd;
+  --light-text-color: #686868;
+  --link-color: #0000e6;
+  --link-hover: #000073;
+  --btn-color: #ff4d4d;
+  --btn-hover: #b63a3a;
+  --border-color: #94a6ad;
+}
+
+input,
+select,
+textarea {
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+.desk-only {
+  display: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  padding: 1.5rem;
+  background-color: #0e1511;
+  color: #c2c2c2;
+  text-align: center;
+}
+
+.main-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.main-logo:hover {
+  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.473);
+}
+
+.content {
+  flex: 1 0 auto;
+  line-height: 1.5rem;
+  font-family: "Didact Gothic", "Roboto", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--main-text-color);
+}
+
+.content .nav {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+  background-color: var(--nav-bg-color);
+}
+
+.content .nav .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+}
+
+.content .nav .intro .banner {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+
+.content .nav .intro .tagline {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: var(--light-text-color);
+}
+
+.content .nav .intro a {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+}
+
+.content .index-options {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 2rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.content .index-options a {
+  text-align: center;
+  background-color: var(--nav-bg-color);
+  padding: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 3rem;
+  color: var(--main-text-color);
+  box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.048);
+  transition: 0.25s ease-in-out;
+  border-radius: 1rem;
+}
+
+.content .index-options a:hover {
+  background-color: #f7f7f7;
+  box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  color: #506172;
+}
+
+.content .formcontainer {
+  margin: 2rem 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--nav-bg-color);
+  transition: 0.15s ease-in-out;
+}
+
+.content .formcontainer:hover {
+  box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.content .formcontainer .regform {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.content .formcontainer .regform .head {
+  font-size: 1.5em;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.content .formcontainer .regform .formip {
+  padding: 0.8rem;
+  margin: 0.5rem 0rem;
+  transition: 0.3s ease-in-out;
+}
+
+.content .formcontainer .regform .formbtn {
+  padding: 0.8rem;
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  border: none;
+  color: white;
+  transition: 0.18s ease-in-out;
+}
+
+.content .formcontainer .regform .formbtn:hover {
+  background-color: var(--btn-hover);
+}
+
+.content .formcontainer .regform a {
+  text-decoration: none;
+  margin-top: 1rem;
+  color: var(--link-color);
+  transition: 0.18s ease-in-out;
+}
+
+.content .formcontainer .regform a:hover {
+  color: var(--link-hover);
+}
+
+.content .formcontainer img {
+  object-fit: cover;
+  display: none;
+}
+
+/* Table */
+
+.table-container {
+  margin: 2rem 0.8rem;
+  background-color: var(--nav-bg-color);
+  transition: 0.15s ease-in-out;
+  box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.096);
+  padding: 1rem 2rem;
+}
+
+.user-data {
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  border: none;
+  border-spacing: 0;
+}
+
+.user-data th {
+  font-size: 0.8rem;
+  padding: 0.5rem 0rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-data td {
+  font-size: 1rem;
+  margin: 0rem;
+  padding: 0.8rem 0rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* formpage */
+
+.content .formcontainer .aform {
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  text-align: left;
+}
+
+.content .formcontainer .aform .sec {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.content .formcontainer .aform .sec .sec-heading {
+  border-bottom: 1px solid #1b26312d;
+  border-bottom-width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.content .formcontainer .aform .sec .sub-sec {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0rem;
+  box-sizing: border-box;
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  box-sizing: border-box;
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec label {
+  margin-right: 0.5rem;
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec input,
+textarea,
+select {
+  margin: 0 0 0 0;
+  width: 280px;
+  padding: 0.8rem 0.2rem;
+  border-radius: 0rem;
+  background: none;
+  border: solid 2px #d9d9d9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border: solid 2px var(--main-text-color);
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec input[type="date"] {
+  padding: 0.4rem;
+}
+
+.content .formcontainer .aform .sec input[type="submit"] {
+  width: 150px;
+  padding: 0.8rem;
+  margin: 0.5rem 0rem;
+  cursor: pointer;
+  background: #23233b;
+  color: white;
+  border: none;
+  transition: 0.18s ease-in-out;
+}
+
+.content .formcontainer .aform .sec input[type="submit"]:hover {
+  background-color: #65657a;
+  color: white;
+}
+
+.content .formcontainer .aform .sec .sub-sec .mini-sec .full {
+  box-sizing: border-box;
+  width: 500px;
+}
+/* formpage */
+
+/* formmodal */
+
+.content .modal {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 15%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content .modal .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 0 8rem;
+  padding: 4rem 3rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.content .modal .modal-content p {
+  margin-bottom: 3rem;
+}
+
+.content .modal .modal-content a {
+  text-decoration: none;
+  margin: 3rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: #23233b;
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  transition: 0.18s ease-in-out;
+}
+
+.content .modal .modal-content a:hover {
+  background-color: #65657a;
+  color: white;
+}
+
+/* formmodal */
+
+@media screen and (min-width: 980px) {
+  .content .index-options a {
+    font-size: 2rem;
+    padding: 5rem;
+  }
+}
+
+@media screen and (min-width: 824px) {
+  .content .formcontainer {
+    margin: 2rem 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content .formcontainer .aform .sec .sub-sec .mini-sec input,
+  textarea,
+  select {
+    width: 500px;
+  }
+
+  .content .formcontainer {
+    flex-direction: row;
+  }
+
+  .content .formcontainer img {
+    display: block;
+  }
+
+  .content .nav .intro .banner {
+    font-size: 2.3rem;
+    line-height: 2.4rem;
+  }
+
+  .main-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .content .nav {
+    padding: 0.8rem 5.5rem;
+  }
+
+  .content .nav .intro {
+    padding: 0.5rem 2.3rem;
+  }
+
+  .content .nav .intro .tagline {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .content .nav .intro a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .desk-only {
+    display: table-cell;
+  }
+
+  .content .formcontainer .regform {
+    padding: 2rem 3rem;
+  }
+
+  .content .formcontainer .regform .head {
+    font-size: 2em;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  .content .formcontainer .regform .formip {
+    padding: 0.8rem;
+    margin: 0.5rem 0rem;
+  }
+
+  .content .formcontainer .regform .formbtn {
+    padding: 0.8rem;
+    margin: 0.5rem 0rem;
+  }
+
+  .content .index-options {
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+  }
+}

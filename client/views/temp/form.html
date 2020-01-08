@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GBU Complaints</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="content">
       <div class="nav">
-          <a href="/"
-          ><img src="/assets/images/logo.png" alt="logo" class="main-logo"
-        /></a>
+        <img src="logo.png" alt="logo" class="main-logo" />
         <div class="intro">
           <div class="banner">
             Gautam Buddha University Complaint Portal
@@ -30,7 +28,7 @@
         </div>
       </div>
       <div class="formcontainer">
-        <form class="aform" method="POST" action="/complaint">
+        <form class="aform" action="" onsubmit="return false">
           <div class="sec">
             <div class="sec-heading">Enter Details</div>
 
@@ -50,8 +48,8 @@
 
             <div class="sub-sec">
               <div class="mini-sec">
-                <label for="type">Complaint type</label>
-                <select name="type" id="type" required>
+                <label for="comp">Complaint type</label>
+                <select name="comp" id="comp" required>
                   <option value="civil">Civil</option>
                   <option value="electrical">Electrical</option>
                 </select>
@@ -60,8 +58,8 @@
 
             <div class="sub-sec">
               <div class="mini-sec">
-                <label for="complaint">Brief Description of the Complaint</label>
-                <textarea name="complaint" id="complaint" rows="5"></textarea>
+                <label for="desc">Brief Description of the Complaint</label>
+                <textarea name="desc" id="desc" rows="5"></textarea>
               </div>
             </div>
 
@@ -74,8 +72,8 @@
 
             <div class="sub-sec">
               <div class="mini-sec">
-                <label for="mobile">Mobile Number of the person to be contacted</label>
-                <input type="number" name="mobile" id="mobile" required />
+                <label for="mob">Mobile Number of the person to be contacted</label>
+                <input type="text" name="mob" id="mob" required />
               </div>
             </div>
 
@@ -92,23 +90,16 @@
           </div>
         </form>
       </div>
-      <!-- <div class="modal" id="modal">
+      <div class="modal" id="modal">
         <div class="modal-content">
           <p>Your Complaint has been registered with ID: 1234</p>
           <a href="/index.html">Okay</a>
         </div>
-      </div> -->
+      </div>
     </div>
     <footer>
       Copyright © 2009 Gautam Buddha University. All rights reserved.
     </footer>
   </body>
-  <script>
-        var modal = document.getElementById("modal");
-        var modalbtn = document.getElementById("submit");
-
-        modalbtn.onclick = () => {
-        modal.style.display = "flex";
-        };
-   </script>
+  <script src="cform.js"></script>
 </html>

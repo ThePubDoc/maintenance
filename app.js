@@ -24,7 +24,8 @@ app.use(
 app.set("views", __dirname + "/client/views");
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
-app.use(express.static(path.resolve(__dirname, "client")));
+app.use(express.static(__dirname + "/client/"));
+
 app.use(logger("dev"));
 app.use("/", mainRoutes);
 app.set("port", process.env.PORT || 4000);
