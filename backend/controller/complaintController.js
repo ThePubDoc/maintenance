@@ -16,10 +16,30 @@ function complaint(req,res){
         time
     })
     .then(comp => {
-        res.send("/submitted")
+        // console.log(comp)
+        res.json({
+            "complaint_id" : comp.id
+        })
     })
 }
 
+function status(req,res){
+    const {comp_id} = req.body
+    
+    complaints.findOne({
+        where : {
+            id : comp_id
+        }
+    })
+    .then(comp => {
+        res.render("status" , {
+            comp  : comp
+        })
+    })
+}
+
+
 module.exports = {
-    complaint : complaint
+    complaint : complaint,
+    status : status
 }

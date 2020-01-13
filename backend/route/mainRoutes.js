@@ -21,6 +21,7 @@ router.route('/complaints').post(mainController.complaintStatus)
 
 
 router.route('/status').get(mainController.allComplaints)
+router.route('/status').post(complaintController.status)
 
 
 module.exports = router
