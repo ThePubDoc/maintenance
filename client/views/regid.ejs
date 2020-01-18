@@ -29,27 +29,13 @@
           >
         </div>
       </div>
-
-      <div class="formcontainer">
-        <form class="aform" method="POST" action="/status">
-          <div class="sec">
-            <div class="sec-heading">
-              Check Complaint Status
-            </div>
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="comp_id">Enter Complaint ID</label>
-                <input type="text" name="comp_id" id="comp_id" required />
-              </div>
-            </div>
-          </div>
-          <div class="sec">
-            <div class="sec-heading"></div>
-            <input type="submit" value="Submit" id="submit" />
-          </div>
-        </form>
+      <div class="index-options single">
+        <a
+          >Complaint Successfully registered with ID : <%=compid%>
+          <p>Please note down and store this ID carefully</p>
+        </a>
       </div>
-
+    </div>
     <footer>
       Copyright © 2009 Gautam Buddha University. All rights reserved.
     </footer>

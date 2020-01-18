@@ -39,6 +39,7 @@
             <th class="desk-only">Name</th>
             <th class="desk-only">Mobile No.</th>
             <th class="desk-only">Suitable Time</th>
+            <th>Status</th>
           </tr>
           <% for(i in allComp){%>
           <tr>
@@ -49,6 +50,7 @@
             <td class="desk-only"><%= allComp[i].name %></td>
             <td class="desk-only"><%= allComp[i].mobile %></td>
             <td class="desk-only"><%= allComp[i].time %></td>
+            <td><input type="checkbox" name="status" /></td>
           </tr>
           <%}%>
         </table>

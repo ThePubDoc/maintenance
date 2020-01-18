@@ -110,7 +110,7 @@ footer {
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  line-height: 3rem;
+  line-height: 1.5rem;
   color: var(--main-text-color);
   box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.048);
   transition: 0.25s ease-in-out;
@@ -121,6 +121,11 @@ footer {
   background-color: #f7f7f7;
   box-shadow: 0 0 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
   color: #506172;
+}
+
+.content .index-options a p {
+  font-size: 0.8rem;
+  color: var(--btn-hover);
 }
 
 .content .formcontainer {
@@ -437,5 +442,16 @@ select:focus {
   .content .index-options {
     display: grid;
     grid-template-columns: 33% 33% auto;
+  }
+  .content .single {
+    grid-template-columns: auto;
+  }
+
+  .content .index-options a {
+    line-height: 3rem;
+  }
+
+  .content .index-options a p {
+    font-size: 1.5rem;
   }
 }
