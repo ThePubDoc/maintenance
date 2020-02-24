@@ -37,7 +37,17 @@
             <div class="sub-sec">
               <div class="mini-sec">
                 <label for="building">Name of the building</label>
-                <input type="text" name="building" id="building" required />
+
+                <select name="building" id="building">
+
+                  <%for(let i in buildings){%>
+
+                  <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
+
+                  <%}%>
+                  
+                </select>
+                
               </div>
             </div>
 
