@@ -6,7 +6,10 @@ function home(req, res) {
 }
 
 function complaint(req, res) {
-  res.render("complaint");
+  const buildings = ["ICT","SOE-A","SOE-B","SOM","SOBT","SOL"];
+  res.render("complaint" , {
+    buildings,
+  });
 }
 
 function admin(req, res) {
