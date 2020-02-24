@@ -10,7 +10,12 @@ function complaint(req, res) {
 }
 
 function admin(req, res) {
-  res.render("admin");
+  if(req.session.user){
+    res.redirect("/select")
+  }
+  else{
+    res.render("admin");
+  }
 }
 
 function civilComplaints(req, res) {
