@@ -29,10 +29,44 @@
           >
         </div>
       </div>
-      <div class="index-options">
+
+
+      <div class="formcontainer">
+        <form class="aform" method="GET" action="/comp-type">
+          <div class="sec">
+            <div class="sec-heading">Select Complaint Type</div>
+            <div class="sub-sec">
+              <div class="mini-sec">
+                <label for="building">Name of the building</label>
+                <select name="building" id="building">
+                  <%for(let i in buildings){%>
+                  <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
+                  <%}%>
+                </select>
+              </div>
+            </div>
+            <div class="sub-sec">
+              <div class="mini-sec">
+                <label for="type">Complaint type</label>
+                <select name="type" id="type" required>
+                  <option value="civil">Civil</option>
+                  <option value="electrical">Electrical</option>
+                </select>
+              </div>
+            </div>
+        
+            <div class="sec">
+              <div class="sec-heading"></div>
+              <input type="submit" value="Submit" id="submit" />
+            </div>
+        
+          </form>
+      </div>
+
+     <!--  <div class="index-options">
         <a href="/civilComplaints">Civil Compalints</a>
         <a href="/electricalComplaints">Electrical Compalints</a>
-      </div>
+      </div> -->
     </div>
     <footer>
       Copyright © 2009 Gautam Buddha University. All rights reserved.
