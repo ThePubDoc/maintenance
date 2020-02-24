@@ -1,51 +1,36 @@
-const dbConn = require("../database/db.js");
-const complaints = dbConn.complaints;
+const Maintenance = require("../database/maintenance");
 
 function complaint(req, res) {
   const { building, location, type, complaint, name, mobile, time } = req.body;
   const status = false;
-  console.log(req.body);
-  complaints
-    .create({
-      building,
-      location,
-      type,
-      complaint,
-      name,
-      mobile,
-      status,
-      time
-    })
-    .then(comp => {
-      res.render("regid", { compid: comp.id });
-    })
-    .catch(err => {
-      res.send("Error occured in registering", err);
-    });
+  const maintenance_instance = new Maintenance({building, location, type, complaint, name, mobile, time, status});
+  maintenance_instance.save();
+  res.render("regid" , {compid: maintenance_instance._id});
 }
 
-function status(req, res) {
+async function status(req, res) {
   const { comp_id } = req.body;
-
-  complaints
-    .findOne({
-      where: {
-        id: comp_id
-      }
-    })
-    .then(comp => {
-      const allComp = [];
-      allComp.push(comp.dataValues);
-      res.render("complaints", {
+  console.log(comp_id)
+  const complaint = await Maintenance.findOne({_id : comp_id});
+  const allComp = [complaint]
+  res.render("complaints", {
         allComp
       });
-    })
-    .catch(err => {
-      res.send("Error in finding the complaint", err);
-    });
+}
+
+async function complaints(req,res){
+
+  const {building, type} = req.body;
+  const allComp = await Maintenance.find({ building : building ,
+                      type : type});
+  res.render("complaints", {
+    allComp,
+  })
+  console.log(complaints);
 }
 
 module.exports = {
   complaint: complaint,
-  status: status
+  status: status,
+  complaints: complaints,
 };

@@ -27,11 +27,14 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "jsdom": "^15.1.1",
+    "localtunnel": "^1.9.2",
+    "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
+    "pino": "^5.16.0",
+    "pino-pretty": "^3.6.0",
     "sequelize": "^5.12.2",
     "sqlite3": "^4.0.9",
     "supertest": "^4.0.2",
-    "wget-improved": "^3.0.2",
-    "localtunnel": "^1.9.2"
+    "wget-improved": "^3.0.2"
   }
 }

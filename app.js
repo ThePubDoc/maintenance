@@ -9,6 +9,10 @@ const path = require("path");
 const mainRoutes = require("./backend/route/mainRoutes.js");
 var session = require("express-session");
 var cookieParser = require("cookie-parser");
+const models = require("./backend/database/index");
+
+models.init();
+
 
 app.use(cors());
 app.use(compression());

@@ -1,5 +1,6 @@
-const dbConn = require("../database/db.js");
-const complaints = dbConn.complaints;
+// const dbConn = require("../database/db.js");
+const Maintenance = require("../database/maintenance");
+// const complaints = dbConn.complaints;
 
 function home(req, res) {
   res.render("home");
@@ -78,17 +79,7 @@ function civilComplaints(req, res) {
   if (!req.session.user) {
     res.redirect("/admin");
   } else {
-    complaints
-      .findAll({
-        where: {
-          type: "civil"
-        }
-      })
-      .then(allComp => {
-        res.render("complaints", {
-          allComp: allComp
-        });
-      });
+    
   }
 }
 
@@ -160,17 +151,7 @@ function electricalComplaints(req, res) {
   if (!req.session.user) {
     res.redirect("/admin");
   } else {
-    complaints
-      .findAll({
-        where: {
-          type: "electrical"
-        }
-      })
-      .then(allComp => {
-        res.render("complaints", {
-          allComp: allComp
-        });
-      });
+    
   }
 }
 

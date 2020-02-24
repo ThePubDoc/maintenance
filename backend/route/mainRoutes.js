@@ -9,6 +9,7 @@ const app = express();
 router.route("/").get(mainController.home);
 
 router.route("/select").get(mainController.selecttype);
+router.route("/select").post(complaintController.complaints);
 
 router.route("/complaint").get(mainController.complaint);
 router.route("/complaint").post(complaintController.complaint);
