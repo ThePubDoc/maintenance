@@ -1,43 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>GBU Complaints</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <div class="content">
-      <div class="nav">
-        <a href="/"
-          ><img src="/assets/images/logo.png" alt="logo" class="main-logo"
-        /></a>
-        <div class="intro">
-          <div class="banner">
-            Gautam Buddha University Complaint Portal
-          </div>
-          <div class="tagline">
-            Gautam Buddha University, Established by the Uttar Pradesh Gautam
-            Buddha University Act 2002 UP Act No. 9 of 2002
-          </div>
-          <a
-            href="http://gbu.ac.in/NAAC/NAAC%20Certificate_31Dec18.jpg"
-            target="blank"
-            >Approved by UGC under Section 12-B. NAAC accredited with B+
-            Grade</a
-          >
-        </div>
-      </div>
-      <div class="index-options single">
-        <a
-          >Complaint Successfully registered with ID : <%=compid%>
-          <p>Please note down and store this ID carefully</p>
-        </a>
-      </div>
-    </div>
-    <footer>
-      Copyright © 2009 Gautam Buddha University. All rights reserved.
-    </footer>
-  </body>
-</html>
+<%- include common/header.ejs -%>
+
+<section class="content" id="form-section">
+
+  <div id="info-container">
+    <p>YOUR COMPLAINT HAS BEEN SUCCESSFULLY REGISTERED WITH ID : <%=compid%></p>
+    <p class="danger">PLEASE NOTE DOWN AND STORE THIS ID CAREFULLY</p>
+
+    <button class="submit-button" onclick="window.location.href = '/'">Done</button>
+  </div>
+
+
+  <div id="side-image"></div>
+
+
+</section>
+
+<%- include common/footer -%>

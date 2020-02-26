@@ -1,0 +1,402 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+
+body .hidden {
+  display: none;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+body strong {
+  font-weight: 600;
+}
+
+body h1 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  max-width: 35rem;
+}
+
+@media only screen and (min-device-width: 320px) {
+  body h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 480px) {
+  body h1 {
+    font-size: 2.3rem;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body h1 {
+    font-size: 2.5rem;
+    line-height: 1.125;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body h1 {
+    font-size: 2.5rem;
+    line-height: 1.05;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body h1 {
+    font-size: 2.7rem;
+    line-height: 1.05;
+  }
+}
+
+body h2 {
+  font-size: 1.625rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body h2 {
+    font-size: 1.625rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body h2 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+  }
+}
+
+body h3 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body h3 {
+    font-size: 1.375rem;
+    line-height: 1.33;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body h3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body h3 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body h3 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+}
+
+body h4 {
+  font-size: 1.375rem;
+  line-height: 1.13;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body h4 {
+    font-size: 1.375rem;
+    line-height: 1.13;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body h4 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body h4 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body h4 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+}
+
+body h5 {
+  font-size: 1rem;
+  line-height: 1.13;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body h5 {
+    font-size: 1rem;
+    line-height: 1.13;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body h5 {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body h5 {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body h5 {
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+}
+
+body p {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 31rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  color: #2a2a2a;
+}
+
+body p.subject {
+  font-weight: bold;
+}
+
+body p a {
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 480px) {
+  body p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body p {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  body p {
+    font-size: 1.15rem;
+    max-width: 33rem;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  body p {
+    font-size: 1.15rem;
+  }
+}
+
+body a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body form {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body form div {
+  margin: 0.7rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body form div.button-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body form div label {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+body form div input,
+body form div select,
+body form div textarea {
+  margin: 0 0 0 0;
+  width: 400px;
+  padding: 0.8rem 0.2rem;
+  border-radius: 0rem;
+  background: none;
+  border: solid 2px #d9d9d9;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body form div input:focus,
+body form div select:focus,
+body form div textarea:focus {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  outline: none !important;
+  border: solid 2px #02053f;
+}
+
+body form div button {
+  margin: 0.5rem 0.5rem 0 0;
+  width: 100px;
+}
+
+body div.table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+body div.table-container table.user-data {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  height: auto;
+}
+
+body div.table-container table.user-data td {
+  padding: 1rem 0.5rem;
+  border: 1px solid #c4c4c4;
+}
+
+body div.table-container table.user-data th {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid #c4c4c4;
+}
+
+body .submit-button {
+  color: white;
+  background: none;
+  border: none;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 3px;
+  background-color: #23233b;
+}
+
+body .submit-button:focus, body .submit-button:hover {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: #3a3a5f;
+}
+
+body .cancel-button {
+  color: white;
+  background: none;
+  border: none;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 3px;
+  background-color: #702a2a;
+}
+
+body .cancel-button:focus, body .cancel-button:hover {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: #a13f3f;
+}
+
+body .menu-link {
+  font-family: "Oswald";
+  font-size: 3rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+body .menu-link:hover, body .menu-link:focus {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #10177e;
+}
+/*# sourceMappingURL=root.css.map */

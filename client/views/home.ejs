@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>GBU Complaints</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <div class="content">
-      <div class="nav">
-        <a href="/"
-          ><img src="/assets/images/logo.png" alt="logo" class="main-logo"
-        /></a>
-        <div class="intro">
-          <div class="banner">
-            Gautam Buddha University Complaint Portal
-          </div>
-          <div class="tagline">
-            Gautam Buddha University, Established by the Uttar Pradesh Gautam
-            Buddha University Act 2002 UP Act No. 9 of 2002
-          </div>
-          <a
-            href="http://gbu.ac.in/NAAC/NAAC%20Certificate_31Dec18.jpg"
-            target="blank"
-            >Approved by UGC under Section 12-B. NAAC accredited with B+
-            Grade</a
-          >
+<%- include common/header.ejs -%>
+
+    <section class="content" id="main-section">
+        <div id="side-image">
         </div>
-      </div>
-      <div class="index-options">
-        <a href="/complaint">Register a Complaint</a>
-        <a href="/status">Check Complaint Status</a>
-        <a href="/admin">Admin Login</a>
-      </div>
-    </div>
-    <footer>
-      Copyright © 2009 Gautam Buddha University. All rights reserved.
-    </footer>
-  </body>
-</html>
+        <div id="main-menu">
+            <div><a class="menu-link" href="/complaint">REGISTER A COMPLAINT</a></div>
+            <div><a class="menu-link" href="/status" id="show_status">CHECK COMPLAINT STATUS</a></div>
+            <div><a class="menu-link" href="/admin" id="show_admin">ADMIN LOGIN</a></div>
+        </div>
+    </section>
+
+<%- include common/footer -%>

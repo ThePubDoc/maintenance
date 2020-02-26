@@ -1,0 +1,193 @@
+
+$colors: (
+    primary: #0057a4,
+  );
+
+nav {
+    img {
+        width: 10vh;
+    }
+
+    #upper-header{
+        height: 1.7rem;
+        background-color: #78335D;
+    }
+
+    #nav-content{
+
+        border-bottom: 1px solid #b9b9b9;
+        background-color: white;
+        padding: 1rem 7rem 2rem 7rem;
+        display: flex;
+        justify-content: space-between;
+    
+    
+        #header{
+            display: flex;
+            align-items: center;
+    
+            #header-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 0.5rem;
+                height: 10vh;
+            }
+        }
+    
+        p {
+            font-weight: bold;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            line-height: 1.2rem;
+    
+            &.small {
+                font-weight: normal;
+                font-size: 0.6rem;
+                line-height: 0.8rem;
+            }
+        }
+    
+        #heading{
+            p{
+                margin-top: 1.5rem;
+                font-size: 1.5rem;
+                line-height: 1.7rem;
+            }
+        }
+
+
+    }
+
+
+    
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+footer{
+
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F48B2A;
+    p{
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+#main-section{
+
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    #side-image{
+
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 0, 0, 0),
+            rgba(255, 0, 0, 0),
+            rgb(255, 255, 255)
+        ),url("/images/map.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+    }
+
+    #main-menu{
+        padding: 0 0 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+    .form-container{
+        padding:  2rem 0 0 2rem ;
+    
+        a,p{
+            font-size: 1rem;
+            font-family: 'Oswald', ;
+            font-weight: bold;
+        }
+
+        form{
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+}
+
+#form-section{
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    #side-image{
+        background-image: linear-gradient(
+            to left,
+            rgba(255, 0, 0, 0),
+            rgba(255, 0, 0, 0),
+            rgb(255, 255, 255)
+        ),url("/images/front.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    p{
+        font-family: 'Oswald', ;
+        font-weight: bold;
+    }
+
+    #form-container{
+        padding-top: 1rem;
+        margin-left: 7rem;
+    }
+
+    #info-container{
+        padding-top: 1rem;
+        margin-left: 7rem;
+
+        p{
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            &.danger{
+                color: #a13f3f;
+            }
+        }
+
+    }
+
+}
+
+#complaint-section{
+    padding: 2rem 7rem;
+    min-height: 600px;
+    p{
+        font-family: 'Oswald', ;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.hidden{
+    display: none;
+  }

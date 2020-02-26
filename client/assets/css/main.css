@@ -1,0 +1,205 @@
+nav img {
+  width: 10vh;
+}
+
+nav #upper-header {
+  height: 1.7rem;
+  background-color: #78335D;
+}
+
+nav #nav-content {
+  border-bottom: 1px solid #b9b9b9;
+  background-color: white;
+  padding: 1rem 7rem 2rem 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav #nav-content #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav #nav-content #header #header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 0.5rem;
+  height: 10vh;
+}
+
+nav #nav-content p {
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+nav #nav-content p.small {
+  font-weight: normal;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+}
+
+nav #nav-content #heading p {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F48B2A;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+#main-section {
+  min-height: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+}
+
+#main-section #side-image {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 0, 0, 0)), color-stop(rgba(255, 0, 0, 0)), to(white)), url("/images/map.png");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), white), url("/images/map.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#main-section #main-menu {
+  padding: 0 0 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#main-section .form-container {
+  padding: 2rem 0 0 2rem;
+}
+
+#main-section .form-container a, #main-section .form-container p {
+  font-size: 1rem;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+
+#main-section .form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#form-section {
+  min-height: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
+}
+
+#form-section #side-image {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 0, 0)), color-stop(rgba(255, 0, 0, 0)), to(white)), url("/images/front.jpg");
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), white), url("/images/front.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#form-section p {
+  font-family: "Oswald";
+  font-weight: bold;
+}
+
+#form-section #form-container {
+  padding-top: 1rem;
+  margin-left: 7rem;
+}
+
+#form-section #info-container {
+  padding-top: 1rem;
+  margin-left: 7rem;
+}
+
+#form-section #info-container p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#form-section #info-container p.danger {
+  color: #a13f3f;
+}
+
+#complaint-section {
+  padding: 2rem 7rem;
+  min-height: 600px;
+}
+
+#complaint-section p {
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

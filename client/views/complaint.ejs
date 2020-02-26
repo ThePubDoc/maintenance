@@ -1,124 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>GBU Complaints</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <div class="content">
-      <div class="nav">
-          <a href="/"
-          ><img src="/assets/images/logo.png" alt="logo" class="main-logo"
-        /></a>
-        <div class="intro">
-          <div class="banner">
-            Gautam Buddha University Complaint Portal
-          </div>
-          <div class="tagline">
-            Gautam Buddha University, Established by the Uttar Pradesh Gautam
-            Buddha University Act 2002 UP Act No. 9 of 2002
-          </div>
-          <a
-            href="http://gbu.ac.in/NAAC/NAAC%20Certificate_31Dec18.jpg"
-            target="blank"
-            >Approved by UGC under Section 12-B. NAAC accredited with B+
-            Grade</a
-          >
+<%- include common/header.ejs -%>
+
+
+    <section class="content" id="form-section">
+
+        <div id="form-container">
+            <p>ENTER COMPLAINT DETAILS</p>
+            <form  method="POST" action="/complaint">
+                <div>
+                    <label  for="building">Name of the building</label>
+                    <select name="building" id="building" required>
+                      <%for(let i in buildings){%>
+
+                        <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
+      
+                        <%}%>
+                    </select>
+                </div>
+                <div>
+                    <label for="location">Location of work</label>
+                    <input type="text" name="location" id="location" required>
+                </div>
+                <div>
+                    <label  for="type">Complaint Type</label>
+                    <select name="type" id="type" required>
+                      <option value="civil">Civil</option>
+                      <option value="electrical">Electrical</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="complaint">Brief Description of the Complaint</label>
+                    <textarea name="complaint" id="complaint" rows="5"></textarea>
+                </div>
+                <div>
+                    <label for="name">Name of the person to be contacted</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="mobile">Mobile Number of the person to be contacted</label>
+                    <input type="text" name="mobile" id="mobile" required>
+                </div>
+                <div>
+                    <label for="time">Suitable time</label>
+                    <input type="text" name="time" id="time" required>
+                </div>
+
+                <div class="button-container">
+                    <button class="submit-button">Submit</button>
+                    <button type="button" class="cancel-button" onclick="window.location.href = '/'">Cancel</button>
+                </div>
+            </form>
         </div>
-      </div>
-      <div class="formcontainer">
-        <form class="aform" method="POST" action="/complaint">
-          <div class="sec">
-            <div class="sec-heading">Enter Details</div>
 
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="building">Name of the building</label>
+        <div id="side-image"></div>
 
-                <select name="building" id="building">
 
-                  <%for(let i in buildings){%>
+    </section>
 
-                  <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
-
-                  <%}%>
-                  
-                </select>
-                
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="location">Location of Work</label>
-                <input type="text" name="location" id="location" required />
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="type">Complaint type</label>
-                <select name="type" id="type" required>
-                  <option value="civil">Civil</option>
-                  <option value="electrical">Electrical</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="complaint">Brief Description of the Complaint</label>
-                <textarea name="complaint" id="complaint" rows="5"></textarea>
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="name">Name of the person to be contacted</label>
-                <input type="text" name="name" id="name" required />
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="mobile">Mobile Number of the person to be contacted</label>
-                <input type="number" name="mobile" id="mobile" required />
-              </div>
-            </div>
-
-            <div class="sub-sec">
-              <div class="mini-sec">
-                <label for="location">Suitable time</label>
-                <input type="text" name="time" id="time" required />
-              </div>
-            </div>
-           
-          <div class="sec">
-            <div class="sec-heading"></div>
-            <input type="submit" value="Submit" id="submit" />
-          </div>
-        </form>
-      </div>
-      <!-- <div class="modal" id="modal">
-        <div class="modal-content">
-          <p>Your Complaint has been registered with ID: 1234</p>
-          <a href="/index.html">Okay</a>
-        </div>
-      </div> -->
-    </div>
-    <footer>
-      Copyright © 2009 Gautam Buddha University. All rights reserved.
-    </footer>
-  </body>
-  <script>
-        var modal = document.getElementById("modal");
-        var modalbtn = document.getElementById("submit");
-
-        modalbtn.onclick = () => {
-        modal.style.display = "flex";
-        };
-   </script>
-</html>
+<%- include common/footer -%>

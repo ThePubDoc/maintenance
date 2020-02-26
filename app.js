@@ -28,7 +28,7 @@ app.use(
 app.set("views", __dirname + "/client/views");
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/client/"));
+app.use(express.static(__dirname + "/client/assets/"));
 
 app.use(logger("dev"));
 app.use("/", mainRoutes);
