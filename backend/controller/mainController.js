@@ -3,7 +3,7 @@ const Maintenance = require("../database/maintenance");
 // const complaints = dbConn.complaints;
 
 function home(req, res) {
-  res.render("home");
+  res.render("index");
 }
 
 function complaint(req, res) {
@@ -61,7 +61,7 @@ function complaint(req, res) {
     "Boys Dining-05",
     "Boys Dining-06"
   ];
-  res.render("complaint", {
+  res.render("registration", {
     buildings
   });
 }
@@ -84,7 +84,7 @@ function civilComplaints(req, res) {
 }
 
 function allComplaints(req, res) {
-  res.render("complaintTypeSelection");
+  res.render("checkstatus");
 }
 
 function selecttype(req, res) {

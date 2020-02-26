@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <table class="user-data">
-        <tr>
-          <th>ID</th>
-          <th>Building</th>
-          <th>Location</th>
-          <th>Complaint</th>
-          <th class="desk-only">Name</th>
-          <th class="desk-only">Mobile No.</th>
-          <th class="desk-only">Suitable Time</th>
-          
-          <th>Status</th>
-        </tr>
-    
-        <tr>
-          <td><%= comp.id %></td>
-          <td><%= comp.building %></td>
-          <td><%= comp.location %></td>
-          <td><%= comp.complaint %></td>
-          <td class="desk-only"><%= comp.name %></td>
-          <td class="desk-only"><%= comp.mobile %></td>
-          <td class="desk-only"><%= comp.time %></td>
-          <td><input type="checkbox" name="status"></td>
-          <td><button>Submit</button></td>
-        </tr>
 
-      </table>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <table class="user-data">
+    <tr>
+      <th>ID</th>
+      <th>Building</th>
+      <th>Location</th>
+      <th>Complaint</th>
+      <th class="desk-only">Name</th>
+      <th class="desk-only">Mobile No.</th>
+      <th class="desk-only">Suitable Time</th>
+
+      <th>Status</th>
+    </tr>
+
+    <tr>
+      <td><%= comp.id %></td>
+      <td><%= comp.building %></td>
+      <td><%= comp.location %></td>
+      <td><%= comp.complaint %></td>
+      <td class="desk-only"><%= comp.name %></td>
+      <td class="desk-only"><%= comp.mobile %></td>
+      <td class="desk-only"><%= comp.time %></td>
+      <td><input type="checkbox" name="status"></td>
+      <td><button>Submit</button></td>
+    </tr>
+
+  </table>
 </body>
+
 </html>

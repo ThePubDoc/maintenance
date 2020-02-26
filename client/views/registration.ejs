@@ -1,23 +1,23 @@
 <%- include common/header.ejs -%>
 
 
-    <section class="content" id="form-section">
+<section class="content" id="form-section">
 
-        <div id="form-container">
-            <p>ENTER COMPLAINT DETAILS</p>
-            <form  method="POST" action="/complaint">
-                <div>
-                    <label  for="building">Name of the building</label>
-                    <select name="building" id="building" required>
-                      <%for(let i in buildings){%>
+    <div id="form-container">
+        <p>ENTER COMPLAINT DETAILS</p>
+        <form method="POST" action="/complaint">
+            <div>
+                <label for="building">Name of the building</label>
+                <select name="building" id="building" required>
+                    <%for(let i in buildings){%>
 
-                        <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
-      
-                        <%}%>
+                    <option value="<%=buildings[i]%>"><%=buildings[i]%></option>
+
+                    <%}%>
                     </select>
                 </div>
                 <div>
-                    <label for="location">Location of work</label>
+                    <label for="location">Address of work</label>
                     <input type="text" name="location" id="location" required>
                 </div>
                 <div>
